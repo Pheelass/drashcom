@@ -11,4 +11,6 @@ _Esse website ainda está em fase de desenvolvimento e poderá ocorrer bugs ou e
 
 nota: devido a ausência de um back-end ativo, o site será oferecido e executado apenas via arquivos estáticos, pode acontecer de dados serem perdidos caso sejam salvos dentro dele - Não escreva/salva dados sensíveis dentro da aplicação
 
+
+**commit emergencial**
 Com prazer, Pheela - 11 de set. 2026
