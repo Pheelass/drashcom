@@ -23,6 +23,40 @@ body {
   width: 100vw;
 }
 
+.WARNING_feature {
+  width: 100%;
+  background: white;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+}
+.WARNING_feature h2 {
+  color: red;
+  font-family: verdana;
+  text-indent: 10mm;
+}
+.WARNING_feature p {
+  color: black;
+  font-family: serif;
+  text-indent: 5mm;
+}
+.WARNING_feature #closeParent {
+  width: 25px;
+  height: auto;
+  aspect-ratio: 1/1;
+  font-family: monospace;
+  color: white;
+  background: rgb(240, 0, 0);
+  border: 1px solid white;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.WARNING_feature #closeParent:hover {
+  background: rgb(255, 100, 100);
+  cursor: pointer;
+}
+
 header {
   background: rgb(0, 0, 30);
   height: 50px;
@@ -140,8 +174,6 @@ main .hero button {
 main .hero button:hover {
   background: blueviolet;
   border: 3px solid rebeccapurple;
-  transform: scale(1.05);
-  transition: 0.05s ease;
 }
 main ._webdesc {
   height: 10vh;

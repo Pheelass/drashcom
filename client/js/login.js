@@ -24,6 +24,7 @@ createAccountButton.addEventListener("click", async () => {
 	}
 
 	let requestLogin = await fetch(`/login/${nome}/${senha}`).then(res => res.text()).then(texto => console.log(texto));
+	console.log(typeof requestLogin)
 })
 
 function verify(nome, senha){
