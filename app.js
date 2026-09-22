@@ -19,29 +19,41 @@ app.get("/", (req, res) => {
 
 const saltRounds = 5;
 
+// cadastro
 app.get('/login/:username/:password', async (req, res) => {	
 	let ui = {
 		"tem paes?":"ent tchaes"
 	}
-	res.type('text').send("ain bolsonaru");
+
 	let file = './server/users.json'
 	const texto = await fs.readFile(file);
 	const dados = await JSON.parse(texto, 'utf8');
 	let usuario = req.params.username;
 
+	let usuarioExistente = await dados.find( ctx => ctx.nome === usuario );
+	console.log(Boolean(usuarioExistente))
+
+	if(!usuarioExistente){
+		console.error('user not found');
+	} else {
+		console.error('user found');
+		res.type('text').send('USER_ALREADY_EXIST')
+		return
+	}
+
 	const hash = await bcrypt.hash( req.params.password, saltRounds )
+
 
 	dados.push({
 		nome: usuario, 
 		senha: hash
 	});
 
-	console.log(dados)
 
-	await fs.writeFile(file, JSON.stringify(dados, null, 2))	
+	await fs.writeFile(file, JSON.stringify(dados, null, 2))
+	res.type('text').send('usercrated')
 });
 
 app.listen('8000', '127.0.0.1', () => {
 	console.log('listening on http://localhost:8000')
 })
-
