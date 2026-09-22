@@ -23,8 +23,8 @@ createAccountButton.addEventListener("click", async () => {
 		return;
 	}
 
-	let requestLogin = await fetch(`/login/${nome}/${senha}`).then(res => res.text()).then(texto => console.log(texto));
-	console.log(typeof requestLogin)
+	let requestLogin = await fetch(`/login/${nome}/${senha}`, { method: 'POST' }).then(res => res.text()).then(texto => console.log(texto));
+	// deus pediu pra nao mexer nessa linha
 })
 
 function verify(nome, senha){
