@@ -24,7 +24,7 @@ body {
 }
 
 .WARNING_feature {
-  width: 100%;
+  width: 100vw;
   background: white;
   box-sizing: border-box;
   padding: 10px;
@@ -56,6 +56,14 @@ body {
   background: rgb(255, 100, 100);
   cursor: pointer;
 }
+@media (width < 700px) {
+  .WARNING_feature p {
+    font-size: 10px;
+  }
+  .WARNING_feature h2 {
+    font-size: 20px;
+  }
+}
 
 header {
   background: rgb(0, 0, 30);
@@ -70,20 +78,26 @@ header {
   padding-left: 20px;
   padding-right: 20px;
   gap: 0;
+  position: relative;
 }
-header nav {
+@media (width < 700px) {
+  header {
+    display: flex;
+  }
+}
+header .nav1 {
   height: 100%;
-  width: 100%;
   display: flex;
   gap: 20px;
   box-sizing: border-box;
   align-items: center;
   justify-content: flex-start;
+  max-width: 100%;
 }
-header nav #header_logo {
+header .nav1 #header_logo {
   height: 80%;
 }
-header nav a {
+header .nav1 a {
   transition: 0.1s ease;
   text-transform: none;
   text-decoration: none;
@@ -98,18 +112,68 @@ header nav a {
   padding: 10px;
   align-items: center;
 }
-header nav a:hover {
+header .nav1 a:hover {
   border-top: 5px solid white;
   filter: invert(0%);
   color: violet;
 }
-header nav a:hover img {
+header .nav1 a:hover img {
   src: "./client/content/user-icon[touched].svg";
 }
+@media (width < 700px) {
+  header .nav1 {
+    overflow-x: auto;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+}
 header .nav2 {
+  height: 100%;
   display: flex;
-  width: 100%;
+  gap: 20px;
+  box-sizing: border-box;
+  align-items: center;
   justify-content: flex-end;
+  max-width: 100%;
+}
+@media (width < 700px) {
+  header .nav2 {
+    height: 100%;
+    width: 50px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: 0;
+    background: rgb(0, 0, 30);
+    align-items: center;
+    justify-content: flex-start;
+  }
+  header .nav2 a {
+    font-size: 0;
+    text-decoration: none;
+  }
+}
+header .nav2 a {
+  transition: 0.1s ease;
+  text-transform: none;
+  text-decoration: none;
+  color: white;
+  gap: 5px;
+  filter: invert(10%);
+  place-content: center;
+  border-top: 5px solid rgba(255, 255, 255, 0);
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+  align-items: center;
+}
+header .nav2 a:hover {
+  border-top: 5px solid white;
+  filter: invert(0%);
+  color: violet;
+}
+header .nav2 a img {
+  height: 90%;
 }
 
 main {
@@ -121,6 +185,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (width < 700px) {
+  main {
+    padding: 0;
+  }
 }
 main .hero {
   width: 100%;
@@ -149,15 +218,27 @@ main .hero h4 {
   color: white;
   font-family: verdana;
   text-transform: uppercase;
+  font-size: 0.8em;
 }
 main .hero h4 #h_span1 {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 main .hero h4 #h_span2 {
-  font-size: 2.5em;
+  font-size: 3em;
   font-style: inherit;
   text-decoration: 2px underline;
   text-underline-offset: 10px;
+}
+@media (width < 700px) {
+  main .hero h4 {
+    font-size: 0.8em;
+  }
+  main .hero h4 #h_span1 {
+    font-size: 2.5em;
+  }
+  main .hero h4 #h_spam2 {
+    font-size: 3em;
+  }
 }
 main .hero button {
   z-index: 1;
@@ -174,6 +255,14 @@ main .hero button {
 main .hero button:hover {
   background: blueviolet;
   border: 3px solid rebeccapurple;
+}
+@media (width < 700px) {
+  main .hero {
+    height: 40vh;
+  }
+  main .hero img {
+    height: 200%;
+  }
 }
 main ._webdesc {
   height: 10vh;

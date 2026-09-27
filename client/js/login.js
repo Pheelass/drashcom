@@ -2,7 +2,7 @@ console.log("login JS Working");
 
 const codeMessageStatus = {
 	201: "BAD REQUEST: Caixa(s) vazia(s) detectada(s)",
-	301: "TOO LONG: senha/login muita longa"
+	301: "TOO LONG: senha/login muito curto"
 }
 const createAccountButton = document.getElementById("createAccountButton");
 
@@ -20,21 +20,34 @@ createAccountButton.addEventListener("click", async () => {
 		} else {
 			alert(`STRANGE ERROR: ${verification}`)
 		}
+
 		return;
 	}
 
-	let requestLogin = await fetch(`/login/${nome}/${senha}`, { method: 'POST' }).then(res => res.text()).then(texto => console.log(texto));
-	// deus pediu pra nao mexer nessa linha
+	let requestLogin = await fetch(`/login/${nome.toLowerCase()}/${senha}`, { method: 'POST' });
+
+	let status = requestLogin.status
+	if (status === 401){
+		alert("senha/nome incorreta");
+	};
+	if (status === 200){
+		alert("logado com sucesso");
+	};
+	if (status === 201){
+		alert("usuario cadastrado");
+	};
 })
 
 function verify(nome, senha){
 	let nomeCtx = nome.trim();
 	let senhaCtx = senha.trim();
+
 	if(!nomeCtx || !senhaCtx){
-		return { status: false, code: 201 }
+		return { status: false, code: 201 };
 	}
-	if(nomeCtx.length > 20 || senhaCtx.length > 50){
-		return { status: false, code: 301 }
+	
+	if(nomeCtx.length < 3 || senhaCtx.length < 5){
+		return { status: false, code: 301 };
 	}
 	return { status: true, code: 400 }
 }
