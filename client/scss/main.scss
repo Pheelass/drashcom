@@ -1,3 +1,9 @@
+.fascinate-regular {
+  font-family: "Fascinate", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
 	margin: 0; padding: 0;
 }
@@ -10,7 +16,57 @@ img {
 body {
 	box-sizing: border-box;
 	background: rgb(30, 0, 50, 1.0);
-	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+}
+
+.WARNING_feature {
+	width: 100vw;
+	background: white;
+	box-sizing: border-box;
+	padding: 10px;
+	position: relative;
+
+	h2 {
+		color: red;
+		font-family: verdana;
+		text-indent: 10mm;
+	}
+	p {
+		color: black;
+		font-family: serif;
+		text-indent: 5mm;
+	}
+
+	#closeParent {
+		width: 25px;
+		height: auto;
+		aspect-ratio: 1/1;
+		font-family: monospace;
+		color: white;
+		background: rgb(240, 0, 0, 1.0);
+		border: 1px solid white;
+		position: absolute;
+		right: 20px;
+		top: 10px;
+
+		&:hover {
+			background: rgb(255, 100, 100, 1.0);
+			cursor: pointer;
+		}
+	}
+
+	@media (width < 700px) {
+		p {
+			font-size: 10px;
+		}
+
+		h2 {
+			font-size: 20px;
+		}
+	}
 }
 
 header {
@@ -26,58 +82,132 @@ header {
 	padding-left: 20px;
 	padding-right: 20px;
 	gap: 0;
+	position: relative;
 
+	@media (width < 700px) {
+		display: flex;
+	}
 
-	nav {
+	.nav1 {
 		height: 100%;
-		width: 100%;
 		display: flex;
 		gap: 20px;
 		box-sizing: border-box;
 		align-items: center;
 		justify-content: flex-start;
-
+		max-width: 100%;
+		
 		#header_logo {
 			height: 80%;
 		}
-		a {
 
+		a {
 			transition: 0.1s ease;
 			text-transform: none;
 			text-decoration: none;
-			height: 100%;
-			color: rgb(100, 100, 100, 1.0);
+			color: white;
+			gap: 5px;
+			filter: invert(10%);
 			place-content: center;
+			border-top: 5px solid rgb(255, 255, 255, 0.0);
+			height: 100%;
+			display: flex;
+			box-sizing: border-box;
+			padding: 10px;
+			align-items: center;
 
 			&:hover {
-				border-top: 10px solid white;
-				color: white;
+				border-top: 5px solid white;
+				filter: invert(0%);
+				color: violet;
+
+				img {
+					src: './client/content/user-icon[touched].svg';
+				}
 			}
+		}
+
+		@media (width < 700px) {
+			overflow-x: auto;
+			padding-right: 20px;
+			box-sizing: border-box;
 		}
 	}
 
 	.nav2 {
+		height: 100%;
 		display: flex;
-		width: 100%;
+		gap: 20px;
+		box-sizing: border-box;
+		align-items: center;
 		justify-content: flex-end;
+		max-width: 100%;
+
+		@media (width < 700px) {
+			height: 100%;
+			width: 50px;
+			aspect-ratio: 1/1;
+			position: absolute;
+			right: 0;
+			background: rgb(0, 0, 30, 1.0);
+			align-items: center;
+			justify-content: flex-start;
+
+			a {
+				font-size: 0;
+				text-decoration: none;
+			}
+		}
+
+		a {
+			transition: 0.1s ease;
+			text-transform: none;
+			text-decoration: none;
+			color: white;
+			gap: 5px;
+			filter: invert(10%);
+			place-content: center;
+			border-top: 5px solid rgb(255, 255, 255, 0.0);
+			height: 100%;
+			display: flex;
+			box-sizing: border-box;
+			padding: 10px;
+			align-items: center;
+
+			&:hover {
+				border-top: 5px solid white;
+				filter: invert(0%);
+				color: violet;
+			}
+
+			img {
+				height: 90%;
+			}
+		}
+		
 	}
+
+	
+
 }
-
-
 main {
 	position: relative;
 	width: 100%;
 	padding: 40px;
 	box-sizing: border-box;
-	gap: 150px;
+	gap: 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 
+	@media (width < 700px) {
+		padding: 0;
+	}
+
 	.hero {
 		width: 100%;
 		background: black;
-		height: 400px;
+		height: 60vh;
 		overflow: hidden;
 		position: relative;
 		display: flex;
@@ -101,16 +231,30 @@ main {
 			font-size: 1.5em;
 			color: white;
 			font-family: verdana;
+			text-transform: uppercase;
+			font-size: 0.8em;
 
 			#h_span1 {
-				font-size: 2em;
+				font-size: 2.5em;
 			}
 
 			#h_span2 {
-				font-size: 2.5em;
+				font-size: 3em;
 				font-style: inherit;
 				text-decoration: 2px underline;
 				text-underline-offset: 10px;
+			}
+
+			@media (width < 700px) {
+				font-size: 0.8em;
+
+				#h_span1 {
+					font-size: 2.5em;
+				}
+
+				#h_spam2 {
+					font-size: 3em;
+				}
 			}
 		}
 
@@ -129,19 +273,82 @@ main {
 			&:hover {
 				background: blueviolet;
 				border: 3px solid rebeccapurple;
-				transform: scale(1.05);
-				transition: 0.05s ease;
+			}
+		}
+
+		@media (width < 700px) {
+			height: 40vh;
+
+			img {
+				height: 200%;
 			}
 		}
 	}
 
-	.details_1 {
+	._webdesc {
+		height: 10vh;
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		background: black;
+		place-content: center;
+		place-items: center;
+		grid-auto-rows: 100%;
+		padding: 20px;
+
+		h4 {
+			font-family: Fascinate;
+			color: white;
+			font-size: 2.5em;
+		}
+
+		div {
+			text-indent: 7mm;
+
+			p {
+				color: white;
+
+			}	
+		}
+	}
+
+	.openArtWorks {
 		h4 {
 			color: white;
 			font-family: verdana;
 			font-size: 2em;
 			text-transform: uppercase;
 			font-style: italic;
+		}
+
+		.gallery {
+			height: 400px;
+			width: 100%;
+			overflow: auto;
+			display: flex;
+			padding: 20px;
+			box-sizing: border-box;
+			gap: 30px;
+			background: rgb(0, 0, 0, 0.5);
+			margin: 0 auto;
+
+			img {
+				height: 100%;
+			}
+		}
+
+		ul {
+			list-style: none;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			place-items: center;
+			gap: 20px;
+			padding: 20px;
+			box-sizing: border-box;
+			color: white;
+			font-style: italic;
+			font-family: verdana;
+			font-size: 20px;
 		}
 	}
 }
