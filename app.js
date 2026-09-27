@@ -14,6 +14,7 @@ app.use(express.static(path.join(__dirname + '/client/')))
 // ser um problema aqui. 
 
 app.use(express.json())
+app.use(express.urlencoded());
 
 app.get("/", (req, res) => {
 	res.sendFile(__dirname + '/client/main.html');
@@ -22,29 +23,24 @@ app.get("/", (req, res) => {
 const saltRounds = 5;
 
 // cadastro
-app.post('/login/:username/:password', async (req, res) => {	
-	let ui = {
-		"tem paes?":"ent tchaes"
-	}
-
+app.post('/login', async (req, res) => {
 	let file = './server/users.json'
 	const texto = await fs.readFile(file);
 	const dados = await JSON.parse(texto, 'utf8');
-	let usuario = req.params.username;
-	let senha = req.params.password;
+	let usuario = req.body.user.name;
 
 	let usuarioExistente = await dados.find( ctx => ctx.nome === usuario );
-	console.log(usuarioExistente)
+	console.log('usuario encontrado?: ' + Boolean(usuarioExistente))
 
 
-	if(!usuarioExistente){ 																// se o <usuario:nome> NAO existe
+	if(!usuarioExistente){										
 		console.error('> Usuario Inexistente');
+		res.status(404).type('text').send('usuário não encontrado')
 
-	} else { 																			// se o <usuario:nome> existe
+	} else { 																			
 		console.log('> O usuario existe');
 
-		let ctxx = bcrypt.compareSync(senha, usuarioExistente.senha, function(err, result) {
-		})
+		let ctxx = bcrypt.compareSync(req.body.user.psw, usuarioExistente.senha)
 
 		if (ctxx){
 			res.status(200).type('text').send('welcome!');
@@ -56,11 +52,10 @@ app.post('/login/:username/:password', async (req, res) => {
 			return
 		}
 
-		res.status(201).type('text').send('usuario criado!')
-		return
 	}
 
-	const hash = await bcrypt.hash( req.params.password, saltRounds )
+	/* ===== for hashing passwords
+	const hash = await bcrypt.hash( req.body.user.psw, saltRounds )
 
 
 	dados.push({ nome: usuario, senha: hash });
@@ -68,6 +63,7 @@ app.post('/login/:username/:password', async (req, res) => {
 
 	await fs.writeFile(file, JSON.stringify(dados, null, 2))
 	res.status(201).type('text').send('usercreated')
+	*/
 });
 
 app.listen('8000', '0.0.0.0', () => {

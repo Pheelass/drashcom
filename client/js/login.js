@@ -24,7 +24,18 @@ createAccountButton.addEventListener("click", async () => {
 		return;
 	}
 
-	let requestLogin = await fetch(`/login/${nome.toLowerCase()}/${senha}`, { method: 'POST' });
+	let requestLogin = await fetch(`/login`, { 
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			user: {
+				name: nome,
+				psw: senha
+			}
+		})
+	});
 
 	let status = requestLogin.status
 	if (status === 401){
@@ -35,6 +46,9 @@ createAccountButton.addEventListener("click", async () => {
 	};
 	if (status === 201){
 		alert("usuario cadastrado");
+	};
+	if (status === 404){
+		alert("usuario nao achado");
 	};
 })
 
