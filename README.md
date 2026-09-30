@@ -1,4 +1,4 @@
-# drashcom - Artes para Artistas
+# drashcom - Artes para Artistas V 1.0.0
 
 ## ALERTA
 _Esse website ainda está em fase de desenvolvimento e poderá ocorrer bugs ou encontrar falhas durante o acesso a esta aplicação, então caso se depare com qualquer problema visual ou sistemático, peço que me reportem via mensagens diretas._
