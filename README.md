@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # drashcom - Artes para Artistas V1.0.5
+=======
+# drashcom - Artes para Artistas V1.0.3
+>>>>>>> origin/testingFeatures
 
 ## ALERTA
 
