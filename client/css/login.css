@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  font-family: arial;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   box-sizing: border-box;
   padding: 20px;
   min-width: 300px;
+  gap: 10px;
 }
 .login img {
   position: absolute;
@@ -41,6 +43,9 @@ body {
 }
 .login h2 {
   justify-self: flex-start;
+}
+.login a {
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=login.css.map */

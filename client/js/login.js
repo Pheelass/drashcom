@@ -2,26 +2,21 @@ console.log("login JS Working");
 
 const codeMessageStatus = {
 	201: "BAD REQUEST: Caixa(s) vazia(s) detectada(s)",
-	301: "TOO LONG: senha/login muito curto"
 }
-const createAccountButton = document.getElementById("createAccountButton");
+const loginButton = document.getElementById("loginButton");
 
-createAccountButton.addEventListener("click", async () => {
+loginButton.addEventListener("click", async () => {
 	let username = document.getElementById("username");
 	let password = document.getElementById("password");
-	let nome = username.value;
-	let senha = password.value;
+	let _nome = username.value;
+	let _senha = password.value;
+	let nome = _nome.trim();
+	let senha = _senha.trim();
+	console.log(nome, senha)
 
-	let verification = verify(nome, senha);
-
-	if(!verification.status){
-		if(codeMessageStatus[verification.code] !== "undefined"){
-			alert(codeMessageStatus[verification.code])
-		} else {
-			alert(`STRANGE ERROR: ${verification}`)
-		}
-
-		return;
+	if ( !nome || !senha ) {
+		alert('valor inválido - caixas vazias');
+		return
 	}
 
 	let requestLogin = await fetch(`/login`, { 
@@ -47,21 +42,7 @@ createAccountButton.addEventListener("click", async () => {
 	if (status === 201){
 		alert("usuario cadastrado");
 	};
-	if (status === 404){
-		alert("usuario nao achado");
+	if (status === 500){
+		alert("algo aconteceu");
 	};
 })
-
-function verify(nome, senha){
-	let nomeCtx = nome.trim();
-	let senhaCtx = senha.trim();
-
-	if(!nomeCtx || !senhaCtx){
-		return { status: false, code: 201 };
-	}
-	
-	if(nomeCtx.length < 3 || senhaCtx.length < 5){
-		return { status: false, code: 301 };
-	}
-	return { status: true, code: 400 }
-}

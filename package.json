@@ -1,12 +1,17 @@
 {
   "type": "module",
   "dependencies": {
+    "@types/node": "^26.6.4",
     "bcrypt": "^6.0.0",
+    "better-sqlite3": "^13.0.3",
     "express": "^5.2.1",
     "node": "^26.7.0",
-    "redis": "^6.2.1"
+    "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/express": "^5.0.6",
     "typescript": "^7.0.2"
   },
   "scripts": {

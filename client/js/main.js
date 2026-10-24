@@ -16,4 +16,3 @@ headerLogin.addEventListener("pointerover", () => {
 headerLogin.addEventListener("pointerleave", () => {
 	headerLoginIcon.src = './content/user-icon.svg'
 })
-
