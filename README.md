@@ -2,7 +2,8 @@
 
 ## ALERTA
 _Esse website ainda está em fase de desenvolvimento e poderá ocorrer bugs ou encontrar falhas durante o acesso a esta aplicação, então caso se depare com qualquer problema visual ou sistemático, peço que me reportem via mensagens diretas._
-_Você está na branch para testes de novas idéias e/ou interfaces_
+
+! _Você está na branch para testes de novas idéias e/ou interfaces_
 
 > *O que é a Drashcom?*
  
