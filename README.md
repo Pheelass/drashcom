@@ -11,6 +11,6 @@ Drashcom é um website focado em juntar grandes e pequenos artistas para montare
 
 O objetivo da Drashcom é garantir que haja novos meios de juntar uma grande comunidade artísticas (tanto digitais quanto tradicionais) em uma bolha só, em uma aplicação totalmente focada não só na melhor comunicação mas principalmente no **aprendizado de pequenos artistas ou iniciantes na área**
 
-nota: devido a ausência de um back-end ativo, o site será oferecido e executado apenas via arquivos estáticos, pode acontecer de dados serem perdidos caso sejam salvos dentro dele - Não escreva/salva dados sensíveis dentro da aplicação
+nota: devido a ausência de um back-end ativo, o site será oferecido e executado apenas via arquivos estáticos, pode acontecer de dados serem perdidos caso sejam salvos dentro dele - Não escreva/salva dados sensíveis dentro da aplicação. **IMPORTANTE(4 de nov. 2026) devido a alguns problemas em relação ao meu dispositivo de trabalho, o projeto permanecerá sem atualizações temporariamente - previsão de novas atualizações: Janeiro, 2027**
 
 Com prazer, Pheela - 11 de set. 2026
