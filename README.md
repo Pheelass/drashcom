@@ -1,4 +1,4 @@
-# drashcom - Artes para Artistas V 1.0.0
+# drashcom - Artes para Artistas V 0.7.0
 
 ## ALERTA
 _Esse website ainda está em fase de desenvolvimento e poderá ocorrer bugs ou encontrar falhas durante o acesso a esta aplicação, então caso se depare com qualquer problema visual ou sistemático, peço que me reportem via mensagens diretas._
@@ -13,6 +13,9 @@ O objetivo da Drashcom é garantir que haja novos meios de juntar uma grande com
 
 nota: devida a ausência de um back-end ativo 24hrs, o **link de acesso para o projeto estará fora de cogitação**, então ele será entregue como uma aplicação estática pelo github.
 
-**IMPORTANTE(4 de nov. 2026) devido a alguns problemas em relação ao meu dispositivo de trabalho, o projeto permanecerá sem atualizações temporariamente - previsão de novas atualizações: Janeiro, 2027**
+**IMPORTANTE — 4 de novembro de 2026**
+
+> Devido a problemas relacionados ao meu ambiente de desenvolvimento, o projeto permanecerá temporariamente sem atualizações.
+> A previsão de retomada é janeiro de 2027.
 
 Com prazer, Pheela - 11 de set. 2026
