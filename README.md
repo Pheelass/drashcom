@@ -1,22 +1,22 @@
-<<<<<<< HEAD
-# drashcom - Artes para Artistas V1.0.5
+# drashcom - Artes para Artistas V 0.12.0
 
 ## ALERTA
+_Esse website ainda está em fase de desenvolvimento e poderá ocorrer bugs ou encontrar falhas durante o acesso a esta aplicação, então caso se depare com qualquer problema visual ou sistemático, peço que me reportem via mensagens diretas._
+_Você está na branch para testes de novas idéias e/ou interfaces_
 
-*Este website ainda está em fase de desenvolvimento e poderá apresentar bugs ou falhas durante o acesso à aplicação. Caso encontre qualquer problema visual ou sistêmico, peço que me reporte por mensagem direta.*
+> *O que é a Drashcom?*
+ 
+Drashcom é um website focado em juntar grandes e pequenos artistas para montarem uma comunidade independente e pacífica em busca de aprendizados, dúvidas, curiosidades ou até mesmo piadas/sátiras
 
-## O que é a Drashcom?
+> *qual o propósito dele?*
 
-A Drashcom é um website focado em reunir grandes e pequenos artistas para formar uma comunidade independente e pacífica, voltada para aprendizado, dúvidas, curiosidades e até mesmo piadas e sátiras.
+O objetivo da Drashcom é garantir que haja novos meios de juntar uma grande comunidade artísticas (tanto digitais quanto tradicionais) em uma bolha só, em uma aplicação totalmente focada não só na melhor comunicação mas principalmente no **aprendizado de pequenos artistas ou iniciantes na área**
 
-## Qual é o propósito?
+nota: devida a ausência de um back-end ativo 24hrs, o **link de acesso para o projeto estará fora de cogitação**, então ele será entregue como uma aplicação estática pelo github.
 
-O objetivo da Drashcom é criar novos meios de reunir uma grande comunidade artística, tanto de artistas digitais quanto tradicionais, em um único espaço.
+**IMPORTANTE — 4 de novembro de 2026**
 
-A aplicação é voltada não apenas para a comunicação entre seus membros, mas principalmente para o aprendizado de pequenos artistas e iniciantes na área.
+> Devido a problemas relacionados ao meu ambiente de desenvolvimento, o projeto permanecerá temporariamente sem atualizações.
+> A previsão de retomada é janeiro de 2027.
 
-> **Nota:** O site atualmente possui **parcialmente** um sistema de back-end funcionando por meio de uma ponte utilizando **ngrok**, que pode estar indisponível ou inacessível. Por esse motivo, algumas funcionalidades podem não estar disponíveis, e o site tende a apresentar um funcionamento mais estático.
-
-Com prazer,
-**Pheela**
-30 de set. de 2026
+Com prazer, Pheela - 11 de set. 2026
